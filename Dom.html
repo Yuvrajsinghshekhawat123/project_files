@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Phases Example</title>
+    <style>
+        div { padding: 20px; border: 2px solid black; margin: 10px; }
+    </style>
+</head>
+<body>
+
+    <div id="grandparent">
+        Grandparent
+        <div id="parent">
+            Parent
+            <button id="child">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        // Capturing Phase (useCapture = true)
+        document.getElementById("grandparent").addEventListener("click", function() {
+            console.log("Capturing: Grandparent");
+        }, true);
+
+        document.getElementById("parent").addEventListener("click", function() {
+            console.log("Capturing: Parent");
+        }, true);
+
+        document.getElementById("child").addEventListener("click", function() {
+            console.log("Capturing: Child");
+        }, true);
+
+        // Bubbling Phase (default)
+        document.getElementById("grandparent").addEventListener("click", function() {
+            console.log("Bubbling: Grandparent");
+        });
+
+        document.getElementById("parent").addEventListener("click", function() {
+            console.log("Bubbling: Parent");
+        });
+
+        document.getElementById("child").addEventListener("click", function(event) {
+            console.log("Target: Child Clicked!");
+            // event.stopPropagation(); // Uncomment to prevent bubbling
+        });
+    </script>
+
+</body>
+</html>
+

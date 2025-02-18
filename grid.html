@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+    <style >
+        .continer{
+            height: 100vh;
+            display: grid;
+            margin: 5px;
+            border: 2px solid black;
+            grid-template-areas: 
+            'a a a a a a a a'
+            'b b b c c c c c'
+            'b b b c c c c c'
+            'd d d c c c c c'
+            
+            'd d d e e e e e'
+            'f f f f f g g g'
+            'h h h h h h h h'
+ 
+            
+            ;
+            
+
+
+        }
+        .grid-item{
+           
+            padding: 20px;
+            text-align: center;
+            margin: 5px;
+            border: 2px solid black;
+
+
+        }
+        #ID1{
+            grid-area: a;
+        }
+        #ID2{
+            grid-area: b;
+        }
+        #ID3{
+            grid-area: c;
+        }
+        #ID4{
+            grid-area: d;
+        }
+        #ID5{
+            grid-area: e;
+        }
+        #ID6{
+            grid-area: f;
+        }
+        #ID7{
+            grid-area: g;
+        }
+        #ID8{
+            grid-area: h;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class ="continer">
+    <div class="grid-item" id="ID1">daba 1</div>
+    <div class="grid-item" id="ID2">daba 2</div>
+    <div class="grid-item" id="ID3">daba 3</div>
+    <div class="grid-item" id="ID4">daba 4</div>
+    <div class="grid-item" id="ID5">daba 5</div>
+    <div class="grid-item" id="ID6">daba 6</div>
+    <div class="grid-item" id="ID7">daba 7</div>
+    <div class="grid-item" id="ID8">daba 8</div>
+    </div>
+</body>
+</html>
